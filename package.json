@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  },
+  "name": "http-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "undici-types": "^7.16.0"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "format": "prettier --write .",
+    "server": "npm run build && node dist/server.js",
+    "client": "npm run build && node dist/client.js",
+    "dev": "npm run build && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "@harshvz",
+  "license": "ISC",
+  "description": "implmentation of http-server from scratch using raw TCP methods"
+}
